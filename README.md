@@ -29,3 +29,19 @@ Static array:  The array is allocated once, so no repeated allocations occur. Ac
 Stack array:  Each function call involves pushing and popping memory from the stack, which introduces some overhead, but the operations are still relatively fast.
 
 Heap array:  Each allocation and deallocation (using new and delete) introduces significant overhead compared to stack operations, leading to much higher execution times.
+
+
+# Task 2 Explanation
+
+# Static Binding
+
+Static binding occurs at compile time, where the method to be executed is determined based on the type of the reference variable, not the actual object it refers to. This means the compiler decides which method to call. Static binding is associated with the new keyword in C#. Defining a method in a derived class with the new keyword hides the base class method with the same name. This form of method hiding is resolved at compile time. If you call the method on a base class reference, the base class version will be invoked, regardless of whether the object is actually an instance of the derived class. 
+
+# Dynamic Binding
+
+Dynamic binding occurs at runtime, where the actual method that gets called is determined based on the object being referred to. Dynamic binding is achieved using the virtual and override keywords in C#.
+
+When a method is marked as virtual in the base class, it tells the compiler that this method can be overridden in derived classes.  The override keyword is used in the derived class to provide a new implementation of the base class's virtual method. When a method is overridden, the runtime determines which version of the method to call based on the actual type of the object.
+
+
+
